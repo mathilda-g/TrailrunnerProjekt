@@ -1,6 +1,6 @@
 package com.example;
 
-public class RunTracker {
+public class DistanceTracker {
 
     private double distance;
 
