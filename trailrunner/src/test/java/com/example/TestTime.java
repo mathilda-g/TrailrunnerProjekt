@@ -11,7 +11,7 @@ public class TestTime {
 
     @BeforeEach
     public void setUp() {
-        time = new Time();
+        time = new Time(1, 30, 20);
     }
 
     @Test

@@ -4,6 +4,13 @@ public class Distance {
 
     private double distance;
 
+    public Distance(double distance) {
+        if (distance <= 0) {
+            throw new IllegalArgumentException("Distansen måste vara större än 0");
+        }
+        this.distance = distance;
+    }
+
     public void setDistance(double distance) {
         if(distance < 0) {
             throw new IllegalArgumentException("Distansen måste vara större än 0");

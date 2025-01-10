@@ -10,7 +10,7 @@ public class TestDistance {
 
     @BeforeEach
     public void setUp() {
-        distance = new Distance();
+        distance = new Distance(5.0);
     }
     
     @Test
