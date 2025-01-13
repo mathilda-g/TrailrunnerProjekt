@@ -20,7 +20,12 @@ public class Distance {
     }
 
     public double getDistance() {
-        return this.distance;
+        return distance;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%.1f km", distance); 
     }
 
 }

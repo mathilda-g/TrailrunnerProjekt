@@ -38,7 +38,7 @@ public class Time {
 
     @Override
     public String toString() {
-        return String.format("%02d timmar, %02d minuter, %02d sekunder", hours, minutes, seconds);
+        return String.format("%02d:%02d:%02d", hours, minutes, seconds);
     }
    
     
