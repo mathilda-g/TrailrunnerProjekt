@@ -37,4 +37,8 @@ public class Date {
         return date;
     }
 
+    public LocalDate toLocalDate() {
+        return LocalDate.parse(date);
+    }
+
 }
