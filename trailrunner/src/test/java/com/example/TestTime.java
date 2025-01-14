@@ -57,6 +57,31 @@ public class TestTime {
             "Sekunder ska inte kunna vara över 59"
         );
     }
+
+
+    @Test
+    public void testToHoursWithWholeHoursOnly() {
+
+        time.setTime(2, 0, 0);
+        double expectedHours = 2.0;
+        Assertions.assertEquals(expectedHours, time.toHours(), 0.01, "Tiden 2 timmar bör ge 2.0 timmar");
+
+    }
+    
+    @Test
+    public void testToHoursWithMinutesAndSeconds() {
+        time.setTime(1, 30, 15);
+       
+        double expectedHours = 1 + (30 / 60.0) + (15 / 3600.0);
+        Assertions.assertEquals(expectedHours, time.toHours(), 0.01, "Tiden 1 timme, 15 minuter och 30 sekunder bör konverteras korrekt");
+    }
+
+    @Test
+    public void testToHoursWithZeroTime() {
+             time.setTime(0, 0, 0);
+
+             Assertions.assertEquals(0.0, time.toHours(), 0.01, "Tiden 0 timmar, 0 minuter och 0 sekunder borde ge 0.0 timmar");
+    }
     
 
 
